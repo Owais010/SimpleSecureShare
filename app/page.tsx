@@ -93,9 +93,14 @@ export default function Home() {
             icon={<Clock className="w-6 h-6 text-electric" />}
           />
         </div>
-        <p className="text-center text-white/30 text-sm mt-12">
-          Files remain stored but are inaccessible after expiry.
-        </p>
+        <div className="text-center mt-12">
+          <p className="text-white/30 text-sm">
+            Files are Removed from the storage over time
+          </p>
+          <p className="text-electric/50 text-xs mt-2 uppercase tracking-widest font-medium">
+            We Respect your privacy
+          </p>
+        </div>
       </section>
 
       <footer className="w-full py-10 text-center text-white/20 text-sm mt-auto relative z-10">
@@ -164,8 +169,11 @@ export default function Home() {
             </div>
 
             <div className="mt-10 pt-8 border-t border-white/5 text-center">
-              <p className="text-white/30 text-sm mb-6">
-                Files remain stored but are inaccessible after expiry.
+              <p className="text-white/30 text-sm">
+                Files are Removed from the storage over time
+              </p>
+              <p className="text-electric/50 text-xs mt-2 uppercase tracking-widest font-medium mb-6">
+                We Respect your privacy
               </p>
               <Link
                 href="/upload"
