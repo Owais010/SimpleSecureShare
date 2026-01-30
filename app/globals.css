@@ -1,26 +1,128 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-electric: #4FD1FF;
+  --color-electric-dim: #4fd1ff33;
+  --color-void: #020202;
+  --color-void-deep: #060606;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-fade-in: fade-in 0.8s ease-out forwards;
+  --animate-slide-up: slide-up 0.8s ease-out forwards;
+  --animate-pulse-glow: pulse-glow 3s infinite ease-in-out;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-hover-lift: hover-lift 0.3s ease-out forwards;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      opacity: 0.6;
+      box-shadow: 0 0 20px var(--color-electric-dim);
+    }
+
+    50% {
+      opacity: 1;
+      box-shadow: 0 0 40px var(--color-electric-dim);
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes hover-lift {
+    from {
+      transform: translateY(0);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    to {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px -10px rgba(79, 209, 255, 0.2);
+    }
+  }
+
+  --shadow-electric-glow: 0 0 20px rgba(79, 209, 255, 0.4);
 }
 
+/* Base Styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at 50% -20%, #1a1a1a, var(--color-void));
+  background-color: var(--color-void);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom Utilities */
+.glass-panel {
+  @apply bg-void/60 backdrop-blur-2xl border border-white/5 shadow-2xl;
+}
+
+.glass-card {
+  @apply bg-void/60 backdrop-blur-2xl border border-white/5 shadow-2xl rounded-2xl p-6 transition-all duration-300;
+}
+
+/* Updated glass-button with explicit hover-lift animation support or baked in */
+.glass-button {
+  @apply bg-electric/10 border border-electric/30 text-electric font-semibold rounded-lg px-6 py-3 hover:bg-electric hover:text-void hover:shadow-electric-glow hover:animate-hover-lift active:scale-95 transition-all duration-300 cursor-pointer;
+}
+
+.glass-input {
+  @apply bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-electric/50 focus:ring-1 focus:ring-electric/50 transition-all duration-300;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-electric to-white bg-[length:200%_auto] animate-pulse-glow;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-electric);
 }
