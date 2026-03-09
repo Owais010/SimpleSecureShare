@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://simplesecureshare.vercel.app/"><b>Live Demo</b></a> •
-  <a href="https://github.com/YOUR_USERNAME/simple-secure-share"><b>GitHub Repository</b></a>
+  <a href="https://github.com/Owais010/simple-secure-share"><b>GitHub Repository</b></a>
 </p>
 
 <p align="center">
