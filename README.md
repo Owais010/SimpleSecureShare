@@ -65,7 +65,7 @@ Ensure you have [Node.js](https://nodejs.org/) (v20+ recommended) and a package 
    npm run dev
    ```
 
-5. **Open the App:** Navigate to [http://localhost:3000](http://localhost:3000)
+5. **Open the App:** Navigate to [https://simplesecureshare.vercel.app/](https://simplesecureshare.vercel.app/)
 
 ## 📖 How It Works
 
