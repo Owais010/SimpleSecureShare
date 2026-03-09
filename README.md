@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://simplesecureshare.vercel.app/"><b>Live Demo</b></a> •
-  <a href="https://github.com/Owais010/simple-secure-share"><b>GitHub Repository</b></a>
+  <a href="https://github.com/Owais010/SimpleSecureShare"><b>GitHub Repository</b></a>
 </p>
 
 <p align="center">
@@ -126,7 +126,7 @@ Make sure you have:
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/simple-secure-share.git
+git clone https://github.com/Owais010/SimpleSecureShare.git cd SimpleSecureShare
 cd simple-secure-share
 ```
 
