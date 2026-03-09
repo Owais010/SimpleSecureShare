@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="../Main%20Page.png" alt="Simple Secure Share Preview" width="700" />
+  <img src="Main%20Page.png" alt="Simple Secure Share Preview" width="700" />
 </div>
 
 <h1 align="center">Simple Secure Share 🔒</h1>
@@ -29,7 +29,7 @@
 ---
 
 <div align="center">
-  <img src="../Upload%20And%20Share.png" alt="Upload and Share Preview" width="700" />
+  <img src="Upload%20And%20Share.png" alt="Upload and Share Preview" width="700" />
 </div>
 
 ---
