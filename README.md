@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <img src="../Main%20Page.png" alt="Simple Secure Share Preview" width="600" />
+</div>
 
-## Getting Started
+<h1 align="center">Simple Secure Share 🔒</h1>
 
-First, run the development server:
+<p align="center">
+  <b>Share files securely. Leave no trace.</b>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p align="center">
+  A simple, fast, and completely end-to-end encrypted file sharing platform built with Next.js 15. Your files are encrypted in the browser before they ever leave your device, ensuring true zero-knowledge privacy.
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<div align="center">
+  <img src="../Upload%20And%20Share.png" alt="Upload and Share Preview" width="600" />
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **🔐 End-to-End Encryption:** Files are encrypted via browser APIs before upload. We never see your unencrypted files.
+- **⚡ Lightning Fast:** Built on Next.js 15 for top-tier performance.
+- **🙈 Zero Knowledge:** The server never holds the encryption keys, and files are automatically removed upon expiry.
+- **⏳ Temporary Links:** Set optional passwords and expiry times for absolute control over file lifespans.
+- **💅 Beautiful UI:** A clean, glassmorphism-inspired design crafted with Tailwind CSS and Radix/Lucide icons.
 
-## Learn More
+## 🚀 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js 15](https://nextjs.org/) (App Router, Server Actions)
+- [React 19](https://react.dev/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [Supabase](https://supabase.com/) (Backend/Database)
+- [Lucide React](https://lucide.dev/) (Icons)
+- [QRCode.react](https://github.com/zpao/qrcode.react)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Prerequisites
 
-## Deploy on Vercel
+Ensure you have [Node.js](https://nodejs.org/) (v20+ recommended) and a package manager (`npm`, `yarn`, `pnpm`, or `bun`).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository** (if you haven't already):
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/simple-secure-share.git
+   cd simple-secure-share
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or yarn / pnpm / bun target equivalents
+   ```
+
+3. **Set up Environment Variables:**
+   Rename `.env.local.example` to `.env.local` (or create it) and provide your Supabase credentials. Example:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open the App:** Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📖 How It Works
+
+1. **Upload:** You select a file. It is securely encrypted in your browser using the Web Crypto API.
+2. **Share:** You receive a secure link that includes the decryption key within the URL fragment (so the server never sees it). You can optionally protect it with a password or set an expiry limit.
+3. **Expire:** Once the link expires or is consumed, the files are deleted forever.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/YOUR_USERNAME/simple-secure-share/issues).
+
+## 📄 License
+
+[MIT](LICENSE)
